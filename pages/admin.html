@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <div id="header__container-left">
+            <img src="" alt="icon">
+            <h1>Kenzie Empresas</h1>
+        </div>
+        <div id="header__container-right">
+            <button id="button__logout">Logout</button>
+        </div>
+    </header>
+    <main>
+        <div id="admin__main-container">
+            <input type="radio">
+            <button>+ criar</button>
+        </div>
+        <section id="admin__department-container">
+            <!-- <h2>Empresa NOME não possui departamentos</h2> -->
+            <div class="admin__card--department">
+                <div class="department__card">
+                    <div class="text-container">
+                        <h2>Department Name</h2>
+                        <p>department description</p>
+                        <span>company name</span>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <img src="" alt="eye icon">
+                    <img src="" alt="pen icon">
+                    <img src="" alt="bin icon">
+                </div>
+
+                <div class="department__card">
+                    <div class="text-container">
+                        <h2>Department Name</h2>
+                        <p>department description</p>
+                        <span>company name</span>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <img src="" alt="eye icon">
+                    <img src="" alt="pen icon">
+                    <img src="" alt="bin icon">
+                </div>
+
+                <div class="department__card">
+                    <div class="text-container">
+                        <h2>Department Name</h2>
+                        <p>department description</p>
+                        <span>company name</span>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <img src="" alt="eye icon">
+                    <img src="" alt="pen icon">
+                    <img src="" alt="bin icon">
+                </div>
+
+                <div class="department__card">
+                    <div class="text-container">
+                        <h2>Department Name</h2>
+                        <p>department description</p>
+                        <span>company name</span>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <img src="" alt="eye icon">
+                    <img src="" alt="pen icon">
+                    <img src="" alt="bin icon">
+                </div>
+                
+            </div>
+        </section>
+        <h2>Usuários cadastrados</h2>
+        <section id="admin__users-container">
+            <!-- <h2>Empresa NOME não possui usuários</h2> -->
+            <div class="admin__card--users">
+                <div class="user__card">
+                    <div class="text-container">
+                        <h2>User Name</h2>
+                        <span>company name</span>
+                    </div>
+                    <div class="button-container">
+                        <img src="" alt="pen icon">
+                        <img src="" alt="bin icon">
+                    </div>
+                </div>
+
+                <div class="user__card">
+                    <div class="text-container">
+                        <h2>User Name</h2>
+                        <span>company name</span>
+                    </div>
+                    <div class="button-container">
+                        <img src="" alt="pen icon">
+                        <img src="" alt="bin icon">
+                    </div>
+                </div>
+
+                <div class="user__card">
+                    <div class="text-container">
+                        <h2>User Name</h2>
+                        <span>company name</span>
+                    </div>
+                    <div class="button-container">
+                        <img src="" alt="pen icon">
+                        <img src="" alt="bin icon">
+                    </div>
+                </div>
+
+                <div class="user__card">
+                    <div class="text-container">
+                        <h2>User Name</h2>
+                        <span>company name</span>
+                    </div>
+                    <div class="button-container">
+                        <img src="" alt="pen icon">
+                        <img src="" alt="bin icon">
+                    </div>
+                </div>
+
+                <div class="user__card">
+                    <div class="text-container">
+                        <h2>User Name</h2>
+                        <span>company name</span>
+                    </div>
+                    <div class="button-container">
+                        <img src="" alt="pen icon">
+                        <img src="" alt="bin icon">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="modal">
+            <div id="modal__container--department-visualize">
+                <header>
+                    <h1>nome do departamento</h1>
+                    <button>X</button>
+                </header>
+                <h2>descrição do departamento</h2>
+                <p>Empresa pertencente</p>
+                <div id="search__user-container">
+                    <input type="radio">
+                    <button>Contratar</button>
+                </div>
+                <ul id="users__card-list">
+                    <li class="modal__user-card">
+                        <h2>User name</h2>
+                        <p>Company Name</p>
+                        <button>Desligar</button>
+                    </li>
+
+                    <li class="modal__user-card">
+                        <h2>User name</h2>
+                        <p>Company Name</p>
+                        <button>Desligar</button>
+                    </li>
+
+                    <li class="modal__user-card">
+                        <h2>User name</h2>
+                        <p>Company Name</p>
+                        <button>Desligar</button>
+                    </li>
+
+                    <li class="modal__user-card">
+                        <h2>User name</h2>
+                        <p>Company Name</p>
+                        <button>Desligar</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="modal__container--department-create">
+                <header>
+                    <h1>Criar departamento</h1>
+                    <button>X</button>
+                </header>
+                <form>
+                    <input type="text" placeholder="Nomde do departamento">
+                    <input type="text" placeholder="Descrição">
+                    <input type="radio">
+                    <button type="submit">Criar</button>
+                </form>
+            </div>
+
+            <div id="modal__container--department-edit">
+                <header>
+                    <h1>Editar departamento</h1>
+                    <button>X</button>
+                </header>
+                <form>
+                    <input type="text" placeholder="Valores anteriores da descrição">
+                    <button>Salvar</button>
+                </form>
+            </div>
+
+            <div id="modal__container--department-delete">
+                <header>
+                    <button>X</button>
+                </header>
+                <h1>Realmente deseja remover o Departamento NOME e demotir seus funcionários?</h1>
+                <button>Remover</button>
+            </div>
+
+            <div id="modal__container--user-edit">
+                <header>
+                    <h1>Editar Usuário</h1>
+                    <button>X</button>
+                </header>
+                <form>
+                    <input type="text" placeholder="Nome">
+                    <input type="text" placeholder="E-mail">
+                    <input type="text" placeholder="Senha">
+                    <button>Salvar</button>
+                </form>
+            </div>
+
+            <div id="modal__container--user-delete">
+                <header>
+                    <button>X</button>
+                </header>
+                <h1>Realmente deseja remover o usuário NOME?</h1>
+                <button>Remover</button>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
