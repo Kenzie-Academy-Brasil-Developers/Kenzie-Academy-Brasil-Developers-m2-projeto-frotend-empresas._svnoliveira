@@ -1,0 +1,77 @@
+#user__info-container, #company__info-container--empty, #company__info-container {
+    width: 100%;
+    height: 8.563rem;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin-top: 1.5rem;
+    padding: 1rem 1.938rem;
+}
+
+#user__info-container > h3 {
+    font: var(--tittle-large);
+}
+
+#user__info-container > p {
+    font: var(--text-subtitle-2);
+}
+
+main > #company__info-container--empty, main > #company__info-container {
+    background-color: var(--color-grey-6);
+    display: flex;
+}
+
+#company__info-container--empty{
+    height: 29.188rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main > #company__info-container--empty > h2 {
+    font: var(--tittle-large);
+}
+
+main > div{
+    height: 4.875rem;
+    background-color: var(--color-brand-1);
+    width: 100%;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main > div> h2{
+    color: var(--color-mode);
+    font: var(--tittle-large);
+}
+
+main > #company__info-container{
+    margin-top: 0;
+    height: 24.188rem;
+    flex-direction: column;
+    align-items: center;
+    border-color: #F8F8F8;
+}
+
+#employee__cards-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    gap: 1.25rem;
+    overflow-y: auto;
+}
+
+.employee__card {
+    border: 1px solid var(--color-brand-1);
+    width: 19.875rem;
+    height: 5.938rem;
+    padding: 0.938rem 1.188rem;
+}
+
+.employee__card >h3 {
+    font: var(--tittle-bold);
+}

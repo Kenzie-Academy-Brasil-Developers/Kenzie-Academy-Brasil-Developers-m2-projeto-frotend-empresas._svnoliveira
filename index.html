@@ -4,28 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/globalstyles.css">
+    <link rel="stylesheet" href="./src/styles/index.css">
+
+    <script src="./src/scripts/index.js" type="module" defer></script>
+
+    <title>Kenzie Empresas</title>
 </head>
 <body>
     <header>
-        <div id="header__container-left">
-            <img src="" alt="icon">
-            <h1>Kenzie Empresas</h1>
-        </div>
-        <div id="header__container-right">
-            <button id="button__login">Login</button>
-            <button id="button__register">Cadastro</button>
+        <div id="header__container">
+            <div id="header__container--left">
+                <div class="circle--blue"></div>
+                <img src="./src/image/Kenzie Empresas.svg" alt="icon">
+            </div>
+            <div id="header__container--right">
+                <button class="button__outline">Login</button>
+                <button class="button__blue">Cadastro</button>
+            </div>
         </div>
     </header>
     <main>
         <div id="main__image-container">
-            <img src="" alt="Home Image">
+            <img src="./src/image/homeimage.svg" alt="Home Image">
         </div>
         <div id="main__filter-container">
-            <input type="radio">
+            <div id="company-select__container">
+                <select name="companies" id="company-select">
+                    <!-- <option value="Selecionar Setor">Selecionar Setor</option>
+                    <option value="company1">company1</option>
+                    <option value="company2">company2</option>
+                    <option value="company3">company3</option>
+                    <option value="company4">company4</option> -->
+                </select>
+            </div>
             <div id="filter__list-container">
                 <h2>Lista de Empresas</h2>
-                <div class="filter__card">
+                <!-- <div class="filter__card">
                     <h3>Empresa Name</h3>
                     <span>Setor</span>
                 </div>
@@ -43,7 +60,7 @@
                 <div class="filter__card">
                     <h3>Empresa Name</h3>
                     <span>Setor</span>
-                </div>
+                </div> -->
             </div>
         </div>
     </main>

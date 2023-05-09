@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../src/styles/reset.css">
+    <link rel="stylesheet" href="../src/styles/globalstyles.css">
+    <link rel="stylesheet" href="../src/styles/user.css">
+
     <title>Área do Usuário</title>
 </head>
 <body>
     <header>
-        <div id="header__container-left">
-            <img src="" alt="icon">
-            <h1>Kenzie Empresas</h1>
-        </div>
-        <div id="header__container-right">
-            <button id="button__logout">Logout</button>
+        <div id="header__container">
+            <div id="header__container--left">
+                <div class="circle--blue"></div>
+                <img src="../src/image/Kenzie Empresas.svg" alt="icon">
+            </div>
+            <div id="header__container--right">
+                <button class="button__outline">Logout</button>
+            </div>
         </div>
     </header>
     <main>
@@ -21,36 +28,36 @@
             <h3>Username</h3>
             <p>meuemail@mail.com</p>
         </section>
-        <section id="company__info-container">
-            <!-- <h2>Voce ainda não foi Contratado</h2> -->
-            <header>
-                <h2>Nome da Companhia - Nome do Departamento</h2>
-            </header>
-            <div id="employee__cards-container">
-                <div class="employee__card">
+        <!-- <div>
+            <h2>Nome da Companhia - Nome do Departamento</h2>
+        </div> -->
+        <section id="company__info-container--empty">
+            <h2>Voce ainda não foi Contratado</h2>
+            <!-- <ul id="employee__cards-container">
+                <li class="employee__card">
                     <h3>Nome do funcionário</h3>
-                </div>
+                </li>
 
-                <div class="employee__card">
+                <li class="employee__card">
                     <h3>Nome do funcionário</h3>
-                </div>
+                </li>
 
-                <div class="employee__card">
+                <li class="employee__card">
                     <h3>Nome do funcionário</h3>
-                </div>
+                </li>
 
-                <div class="employee__card">
+                <li class="employee__card">
                     <h3>Nome do funcionário</h3>
-                </div>
+                </li>
 
-                <div class="employee__card">
+                <li class="employee__card">
                     <h3>Nome do funcionário</h3>
-                </div>
+                </li>
 
-                <div class="employee__card">
+                <li class="employee__card">
                     <h3>Nome do funcionário</h3>
-                </div>
-            </div>
+                </li>
+            </ul> -->
         </section>
     </main>
 </body>

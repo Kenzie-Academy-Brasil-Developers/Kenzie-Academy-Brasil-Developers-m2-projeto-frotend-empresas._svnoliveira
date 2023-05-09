@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --color-brand-1: #0000FF;
+    --color-brand-2: #3532FF;
+    --color-action-1: #36B37E;
+    --color-action-2: #FF5630;
+    --color-action-3: #FFAB00;
+
+    --color-grey-1: #212529;
+    --color-grey-2: #495057;
+    --color-grey-3: #ADB5BD;
+    --color-grey-4: #E9ECEF;
+    --color-grey-5: #F1F3F5;
+    --color-grey-6: #F8F8F8;
+    --color-mode: #FFFFFF;
+
+    --container-size: 72.5rem;
+
+    /* ------------style guide fonts-------------------- */
+    --tittle-1: 600 1.25rem/1.6rem 'Inter';
+    --tittle-2-bold: 600 1rem/1.25rem 'Inter';
+    --tittle-2-regular: 500 1rem/1.25rem 'Inter';
+    --text-1-regular: 400 0.875rem/1.313rem 'Inter';
+    --text-1-medium: 500 0.875rem/1.063rem 'Inter';
+    --text-1-bold: 600 0.875rem/1.063rem 'Inter';
+    --text-2: 500 0.75rem/0.906rem 'Inter';
+
+    /* ---------------extra fonts----------------------------- */
+    --tittle-button: 700 1.125rem 'Roboto';
+    --tittle-poppins: 400 1.25rem/1.875rem 'Poppins';
+    --tittle-poppins-2: 700 2.5rem/3.75rem 'Poppins';
+    --bold-poppins: 700 1.25rem/1.875rem 'Poppins';
+    --tittle-large: 700 2rem/2.438rem 'Inter';
+    --tittle-large-2: 700 2.25rem 'Inter';
+    --tittle-bold: 700 1.25rem 'Inter';
+    --text-large: 500 1.25rem 'Inter';
+    --text-tag: 400 1rem/1.188rem 'Inter';
+    --text-subtitle: 400 1.25rem 'Inter';
+    --text-subtitle-1: 400 1.125rem 'Inter';
+    --text-subtitle-1-bold: 700 1.125rem 'Inter';
+    --text-subtitle-2: 400 1.375rem 'Inter';
+}
+
+/* ---------------------header style ------------- */
+
+body {
+    max-width: var(--container-size);
+    margin: auto;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    height: 10vh;
+    width: 100vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-mode);
+}
+
+#header__container{
+    width: 100%;
+    max-width: var(--container-size);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circle--blue {
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--color-brand-1);
+    border-radius: 50%;
+}
+
+#header__container--left {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#header__container--right {
+    display: flex;
+    flex-direction: row;
+    gap: 0.688rem;
+}
+
+main {
+    padding-top: 10vh;
+}
+
+/* ---------------------buttons------------------------- */
+
+.button__outline, .button__blue, .button__logout {
+    font: var(--tittle-button);
+    color: var(--color-brand-1);
+    min-width: 8.875rem;
+    background-color: var(--color-mode);
+    border: 1px solid var(--color-brand-1);
+    padding: 0.813rem 0rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button__blue {
+    background-color: var(--color-brand-1);
+    color: var(--color-mode);
+}
+
+.button__outline:hover, .button__blue:hover, .button__logout:hover{
+    border-color: var(--color-brand-2);
+    background-color: var(--color-brand-2);
+    color: var(--color-mode);
+}
+
+/* Toast inspiration: https://www.w3schools.com/howto/howto_js_snackbar.asp */
+.toast { 
+    min-width: 250px; 
+    margin-left: -125px; 
+    color: var(--color-mode);
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%; 
+    bottom: 30px;
+
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+  
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+  
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+  
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/* modal */
+
+#modal__container--department-visualize {
+    width: 53.563rem;
+    height: 39.813rem;
+    background-color: var(--color-mode);
+    padding: 2.438rem 2.688rem;
+    border: 1px solid black;
+}
+
+.modal__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.modal__header > h1 {
+    font: var(--tittle-large-2);
+}
+
+.modal__header > button {
+    height: 1.3rem;
+    width: 1.3rem;
+    font-size: 1.3rem;
+    background-color: var(--color-mode);
+}
+
+#modal > div > h2, li > h2 {
+    font: var(--bold-poppins);
+    margin-bottom: 0.688rem;
+}
+
+#modal > div > p, li > p {
+    font: var(--tittle-poppins);
+    margin-bottom: 1.125rem;
+}
+
+#search__user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#search__user-container > select, #search__user-container > button {
+    height: 3.25rem;
+}
+
+#search__user-container > select {
+    width: 35.313rem;
+    padding: 0 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font: var(--text-subtitle-1);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#search__user-container > button {
+    width: 11.875rem;
+    background-color: var(--color-action-1);
+    font: var(--text-subtitle-1-bold);
+    color: var(--color-mode);
+    cursor: pointer;
+}
+
+#search__user-container > button:hover {
+    border: 2px solid var(--color-grey-1);
+}
+
+#users__card-list {
+    height: 18.125rem;
+    width: 100%;
+    background-color: var(--color-grey-6);
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.modal__user-card {
+    min-width: 19.125rem;
+    height: 12.25rem;
+    background-color: var(--color-mode);
+    margin-left: 1.75rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__user-card > button {
+    font: var(--tittle-button);
+    color: var(--color-action-2);
+    width: 100%;
+    background-color: var(--color-mode);
+    border: 1px solid var(--color-action-2);
+    padding: 0.813rem 0rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.modal__user-card > button:hover {
+    color: var(--color-mode);
+    background-color: var(--color-action-2);
+}
