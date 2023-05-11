@@ -1,0 +1,180 @@
+#modal__container--department-visualize {
+    width: 53.563rem;
+    height: 39.813rem;
+    background-color: var(--color-mode);
+    padding: 2.438rem 2.688rem;
+}
+
+.modal__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.modal__header > h1, #modal__container--department-create > div > h1 {
+    font: var(--tittle-large-2);
+}
+
+.modal__header > button {
+    height: 1.3rem;
+    width: 1.3rem;
+    font-size: 1.3rem;
+    background-color: var(--color-mode);
+    cursor: pointer;
+}
+
+dialog > div > h2, li > h2 {
+    font: var(--bold-poppins);
+    margin-bottom: 0.688rem;
+}
+
+dialog > div > p, li > p {
+    font: var(--tittle-poppins);
+    margin-bottom: 1.125rem;
+}
+
+#search__user-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#search__user-container > select, 
+#search__user-container > button,
+form > input,
+form > select,
+form > button,
+#modal__container--department-delete > button,
+#modal__container--user-delete > button{
+    height: 3.25rem;
+}
+
+#search__user-container > select{
+    width: 35.313rem;
+}
+
+#search__user-container > select, form > select, form > input, textarea {
+    padding: 0 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font: var(--text-subtitle-1);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#search__user-container > button {
+width: 11.875rem;
+}
+
+#search__user-container > button, 
+form > button{
+    background-color: var(--color-action-1);
+}
+
+#search__user-container > button, 
+form > button,
+#modal__container--department-delete > button,
+#modal__container--user-delete > button{
+    font: var(--text-subtitle-1-bold);
+    color: var(--color-mode);
+    cursor: pointer;
+}
+
+#search__user-container > button:hover, 
+form > button:hover,
+#modal__container--department-delete > button:hover,
+#modal__container--user-delete > button:hover {
+    border: 2px solid var(--color-grey-1);
+}
+
+#users__card-list {
+    height: 18.125rem;
+    width: 100%;
+    background-color: var(--color-grey-6);
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+.modal__user-card {
+    min-width: 19.125rem;
+    height: 12.25rem;
+    background-color: var(--color-mode);
+    margin-left: 1.75rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__user-card > button {
+    font: var(--tittle-button);
+    color: var(--color-action-2);
+    width: 100%;
+    background-color: var(--color-mode);
+    border: 1px solid var(--color-action-2);
+    padding: 0.813rem 0rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.modal__user-card > button:hover {
+    color: var(--color-mode);
+    background-color: var(--color-action-2);
+}
+
+#modal__container--department-create {
+    width: 31.625rem;
+    height: 25.125rem;
+    padding: 2.625rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#modal__container--department-edit, #modal__container--user-edit{
+    height: 20.625rem;
+    width: 31.625rem;
+    padding: 2.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#modal__container--department-delete, #modal__container--user-delete {
+    width: 45.813rem;
+    height: 21.375rem;
+    padding: 4.125rem 9.688rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#modal__container--department-delete > h1,
+#modal__container--user-delete > h1{
+    font: var(--tittle-poppins-1);
+    text-align: center;
+}
+
+#modal__container--department-delete > div, 
+#modal__container--user-delete > div {
+    position: relative;
+}
+
+#modal__container--department-delete > div > button, 
+#modal__container--user-delete > div > button{
+    position: absolute;
+    top: -2.5rem;
+    right: -7.5rem;
+}
+
+#modal__container--department-delete > button,
+#modal__container--user-delete > button {
+    background-color: var(--color-action-2);
+}

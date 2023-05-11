@@ -1,0 +1,43 @@
+html{
+    background-image: url("../image/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+    width: 100vw;
+}
+
+main {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.95);
+    width: 31.625rem;
+    height: 30.563rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.438rem 2.625rem;
+}
+
+form > h1 {
+    font: var(--tittle-poppins-2);
+}
+
+form > p, form > input {
+    font: var(--text-subtitle);
+}
+
+form > input {
+    padding: 1rem;
+    background-color: var(--color-mode);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+form > span {
+    font: var(--text-subtitle);
+    align-self: center;
+}
