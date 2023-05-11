@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../src/styles/reset.css">
     <link rel="stylesheet" href="../src/styles/globalstyles.css">
     <link rel="stylesheet" href="../src/styles/admin.css">
+    <link rel="stylesheet" href="../src/styles/modal.css">
+
+    <script src="../src/scripts/admin.js" type="module" defer></script>
 
     <title>Admin</title>
 </head>
@@ -29,57 +32,16 @@
             <div id="admin__header">
                 <div id="select__container">
                     <select name="department__select" id="department__select">
-                        <option value="">Selecionar uma Empresa</option>
-                        <option value="empresa1">Empresa 1</option>
-                        <option value="empresa2">Empresa 2</option>
-                        <option value="empresa3">Empresa 3</option>
+                        <!-- <option value="">Selecionar uma Empresa</option>
+                        <option value="empresa1">Empresa 1</option> -->
                     </select>
                 </div>
                 <button class="button__blue">+ criar</button>
             </div>
         </div>
-        <section id="admin__department-container--empty">
-            <h2>Empresa NOME não possui departamentos</h2>
+        <section id="admin__department-container" class="admin__department-container--empty">
+            <h2></h2>
             <!-- <div class="department__card">
-                <div class="text-container">
-                    <h2>Department Name</h2>
-                    <p>department description</p>
-                    <span>company name</span>
-                </div>
-                <div class="button-container">
-                    <img src="../src/image/eye.svg" alt="eye icon" class="eye">
-                    <img src="../src/image/pen.svg" alt="pen icon" class="pen">
-                    <img src="../src/image/bin.svg" alt="bin icon" class="bin">
-                </div>
-            </div>
-
-            <div class="department__card">
-                <div class="text-container">
-                    <h2>Department Name</h2>
-                    <p>department description</p>
-                    <span>company name</span>
-                </div>
-                <div class="button-container">
-                    <img src="../src/image/eye.svg" alt="eye icon" class="eye">
-                    <img src="../src/image/pen.svg" alt="pen icon" class="pen">
-                    <img src="../src/image/bin.svg" alt="bin icon" class="bin">
-                </div>
-            </div>
-
-            <div class="department__card">
-                <div class="text-container">
-                    <h2>Department Name</h2>
-                    <p>department description</p>
-                    <span>company name</span>
-                </div>
-                <div class="button-container">
-                    <img src="../src/image/eye.svg" alt="eye icon" class="eye">
-                    <img src="../src/image/pen.svg" alt="pen icon" class="pen">
-                    <img src="../src/image/bin.svg" alt="bin icon" class="bin">
-                </div>
-            </div>
-
-            <div class="department__card">
                 <div class="text-container">
                     <h2>Department Name</h2>
                     <p>department description</p>
@@ -95,53 +57,9 @@
         <div id="admin__header--user">
             <h2>Usuários cadastrados</h2>
         </div>
-        <section id="admin__users-container--empty">
-            <h2>Empresa NOME não possui usuários</h2>
+        <section id="admin__users-container" class="admin__users-container--empty">
+            <h2></h2>
             <!-- <div class="user__card">
-                <div class="text-container">
-                    <h2>User Name</h2>
-                    <span>company name</span>
-                </div>
-                <div class="button-container">
-                    <img src="../src/image/pen.svg" alt="pen icon" class="pen">
-                    <img src="../src/image/bin.svg" alt="bin icon" class="bin">
-                </div>
-            </div>
-
-            <div class="user__card">
-                <div class="text-container">
-                    <h2>User Name</h2>
-                    <span>company name</span>
-                </div>
-                <div class="button-container">
-                    <img src="../src/image/pen.svg" alt="pen icon" class="pen">
-                    <img src="../src/image/bin.svg" alt="bin icon" class="bin">
-                </div>
-            </div>
-
-            <div class="user__card">
-                <div class="text-container">
-                    <h2>User Name</h2>
-                    <span>company name</span>
-                </div>
-                <div class="button-container">
-                    <img src="../src/image/pen.svg" alt="pen icon" class="pen">
-                    <img src="../src/image/bin.svg" alt="bin icon" class="bin">
-                </div>
-            </div>
-
-            <div class="user__card">
-                <div class="text-container">
-                    <h2>User Name</h2>
-                    <span>company name</span>
-                </div>
-                <div class="button-container">
-                    <img src="../src/image/pen.svg" alt="pen icon" class="pen">
-                    <img src="../src/image/bin.svg" alt="bin icon" class="bin">
-                </div>
-            </div>
-
-            <div class="user__card">
                 <div class="text-container">
                     <h2>User Name</h2>
                     <span>company name</span>
@@ -153,100 +71,97 @@
             </div> -->
         </section>
         <section id="modal">
-            <div id="modal__container--department-visualize">
-                <div class="modal__header">
-                    <h1>nome do departamento</h1>
-                    <button>X</button>
+            <dialog id="modal__container--department-visualize__controller">
+                <div id="modal__container--department-visualize">
+                    <div class="modal__header">
+                        <h1>nome do departamento</h1>
+                        <button>X</button>
+                    </div>
+                    <h2>descrição do departamento</h2>
+                    <p>Empresa pertencente</p>
+                    <div id="search__user-container">
+                        <select name="select-user" id="select-user">
+                            <!-- <option value="none">Selecionar Usuário</option>
+                            <option value="user2">user1</option>
+                            <option value="user3">user2</option> -->
+                        </select>
+                        <button>Contratar</button>
+                    </div>
+                    <ul id="users__card-list">
+                        <!-- <li class="modal__user-card">
+                            <h2>User name</h2>
+                            <p>Company Name</p>
+                            <button>Desligar</button>
+                        </li> -->
+                    </ul>
                 </div>
-                <h2>descrição do departamento</h2>
-                <p>Empresa pertencente</p>
-                <div id="search__user-container">
-                    <select name="select-user" id="select-user">
-                        <option value="none">Selecionar Usuário</option>
-                        <option value="user2">user1</option>
-                        <option value="user3">user2</option>
-                    </select>
-                    <button>Contratar</button>
+            </dialog>
+            
+            <dialog id="modal__container--department-create__controller">
+                <div id="modal__container--department-create">
+                    <div class="modal__header">
+                        <h1>Criar departamento</h1>
+                        <button>X</button>
+                    </div>
+                    <form>
+                        <input type="text" placeholder="Nomde do departamento">
+                        <input type="text" placeholder="Descrição">
+                        <select name="companies" id="company-select">
+                            <!-- <option value="default">Selecionar Empresa</option>
+                            <option value="company1">company1</option>
+                            <option value="company2">company2</option> -->
+                        </select>
+                        <button type="submit">Criar</button>
+                    </form>
                 </div>
-                <ul id="users__card-list">
-                    <li class="modal__user-card">
-                        <h2>User name</h2>
-                        <p>Company Name</p>
-                        <button>Desligar</button>
-                    </li>
+            </dialog>
 
-                    <li class="modal__user-card">
-                        <h2>User name</h2>
-                        <p>Company Name</p>
-                        <button>Desligar</button>
-                    </li>
-
-                    <li class="modal__user-card">
-                        <h2>User name</h2>
-                        <p>Company Name</p>
-                        <button>Desligar</button>
-                    </li>
-
-                    <li class="modal__user-card">
-                        <h2>User name</h2>
-                        <p>Company Name</p>
-                        <button>Desligar</button>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="modal__container--department-create">
-                <div>
-                    <h1>Criar departamento</h1>
-                    <button>X</button>
+            <dialog id="modal__container--department-edit__controller">    
+                <div id="modal__container--department-edit">
+                    <div class="modal__header">
+                        <h1>Editar departamento</h1>
+                        <button>X</button>
+                    </div>
+                    <form>
+                        <textarea placeholder="Valores anteriores da descrição" rows="4" cols="50"></textarea>
+                        <button>Salvar</button>
+                    </form>
                 </div>
-                <form>
-                    <input type="text" placeholder="Nomde do departamento">
-                    <input type="text" placeholder="Descrição">
-                    <input type="radio">
-                    <button type="submit">Criar</button>
-                </form>
-            </div>
+            </dialog>
 
-            <div id="modal__container--department-edit">
-                <div>
-                    <h1>Editar departamento</h1>
-                    <button>X</button>
+            <dialog id="modal__container--department-delete__controller">
+                <div id="modal__container--department-delete">
+                    <div class="modal__header">
+                        <button>X</button>
+                    </div>
+                    <h1>Realmente deseja remover o Departamento NOME e demotir seus funcionários?</h1>
+                    <button>Remover</button>
                 </div>
-                <form>
-                    <input type="text" placeholder="Valores anteriores da descrição">
-                    <button>Salvar</button>
-                </form>
-            </div>
+            </dialog>
 
-            <div id="modal__container--department-delete">
-                <div>
-                    <button>X</button>
+            <dialog id="modal__container--user-edit__controller">
+                <div id="modal__container--user-edit">
+                    <div class="modal__header">
+                        <h1>Editar Usuário</h1>
+                        <button>X</button>
+                    </div>
+                    <form>
+                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="E-mail">
+                        <button>Salvar</button>
+                    </form>
                 </div>
-                <h1>Realmente deseja remover o Departamento NOME e demotir seus funcionários?</h1>
-                <button>Remover</button>
-            </div>
+            </dialog>
 
-            <div id="modal__container--user-edit">
-                <div>
-                    <h1>Editar Usuário</h1>
-                    <button>X</button>
+            <dialog id="modal__container--user-delete__controller">
+                <div id="modal__container--user-delete">
+                    <div class="modal__header">
+                        <button>X</button>
+                    </div>
+                    <h1>Realmente deseja remover o usuário NOME?</h1>
+                    <button>Remover</button>
                 </div>
-                <form>
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="E-mail">
-                    <input type="text" placeholder="Senha">
-                    <button>Salvar</button>
-                </form>
-            </div>
-
-            <div id="modal__container--user-delete">
-                <div>
-                    <button>X</button>
-                </div>
-                <h1>Realmente deseja remover o usuário NOME?</h1>
-                <button>Remover</button>
-            </div>
+            </dialog>
         </section>
     </main>
 
