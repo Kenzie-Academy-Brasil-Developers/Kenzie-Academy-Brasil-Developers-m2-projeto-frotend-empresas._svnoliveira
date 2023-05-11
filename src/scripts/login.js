@@ -1,8 +1,8 @@
 import { handleHeader, routeProtection } from "./render.js";
 import { loginUser } from "./request.js";
 
+routeProtection()
 const handleLogin = () => {
-    routeProtection()
 
     const buttonList = document.querySelectorAll('form > button')
     const loginButton = buttonList[0]

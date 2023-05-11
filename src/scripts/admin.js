@@ -1,11 +1,14 @@
 import { handleModal } from "./modal.js";
 import { renderAdminUsers, renderSelectCompany, handleHeader } from "./render.js";
 
-
-export const handleAdminSelect = async () => {
-    renderSelectCompany('#department__select')
+const isAdmin = localStorage.getItem("@Kenzie-Empresas: admin")
+if(isAdmin == "no"){
+    location.replace("../pages/user.html")
+} else if (!isAdmin){
+    location.replace("../../index.html")
 }
+
+renderSelectCompany('#department__select')
 handleHeader()
-handleAdminSelect()
 renderAdminUsers('default')
 handleModal()

@@ -7,7 +7,7 @@ import {
     renderViewDepartmentModal,
     renderDeleteUserModal,
     renderEditUserModal } from "./render.js"
-import { createNewDepartment } from "./request.js"
+import { createNewDepartment, fireUser } from "./request.js"
 
 export const handleCreateDepartmentButton = () => {
     const controller = document.querySelector('#modal__container--department-create__controller')
@@ -106,15 +106,27 @@ export const handleDepartmentDeleteButtons = () => {
     });
 }
 
-export const handleFireButton = () => {
-    const buttonList = document.querySelectorAll('#users__card-list > li > button')
-    
+export const handleUserDeleteButtons = () => {
+    const buttonList = document.querySelectorAll('.user__card > .button-container > .bin')
+    const deleteController = document.querySelector('#modal__container--user-delete__controller')
+    const removeButton = document.querySelector('#modal__container--user-delete > button')
 
     buttonList.forEach(button => {
         const userID = button.dataset.userID
         button.addEventListener('click', async ()=> {
+            removeButton.dataset.userID = userID
+            await renderDeleteUserModal()
+            deleteController.showModal()
+        })
+    });
+}
+
+export const handleFireButton = () => {
+    const buttonList = document.querySelectorAll('#users__card-list > li > button')
+    buttonList.forEach(button => {
+        const userID = button.dataset.userID
+        button.addEventListener('click', async ()=> {
             await fireUser(userID)
-            toast('red', 'Usuário Desligado')
             button.parentElement.remove()
         })
     });

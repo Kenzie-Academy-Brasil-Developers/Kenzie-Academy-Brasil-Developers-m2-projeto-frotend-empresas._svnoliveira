@@ -277,6 +277,19 @@ export const deleteUser = async (id) => {
     })
 }
 
+export const fireUser = async (userID) => {
+    fetch(`${baseUrl}/employees/dismissEmployee/${userID}`, {
+        method: 'PATCH',
+        headers: requestHeaders
+    })
+    .then(async (res) => {
+        if (res.ok){
+            const response = await res.json()
+            toast('green', response.message)
+        }
+    })
+}
+
 export const editDepartment = async (departmentID, newDescription) => {
     fetch(`${baseUrl}/departments/update/${departmentID}`, {
         method: 'PATCH',

@@ -22,7 +22,8 @@ import {
     handleDepartmentEditButtons, 
     handleDepartmentViewButtons,
     handleFireButton,
-    handleUserEditButtons } from "./modal.js";
+    handleUserEditButtons,
+    handleUserDeleteButtons } from "./modal.js";
 
 //general functions
 
@@ -75,10 +76,9 @@ export const routeProtection = () => {
     const isAdmin = localStorage.getItem("@Kenzie-Empresas: admin")
     const userToken = localStorage.getItem("@Kenzie-Empresas: token")
     if(isAdmin == "yes"){
-        location.replace('./admin.html')
-    }
-    if (userToken){
-        location.replace('./user.html')
+        location.replace("../pages/admin.html")
+    }else if (userToken){
+        location.replace('../pages/user.html')
     }
 }
 
@@ -182,6 +182,16 @@ export const renderUserPage = async () =>{
 
 //Admin renders
 
+const getCompanyFromList = (userId, companyList) => {
+    let company = ''
+    companyList.forEach(tentativeCompany => {
+        if (tentativeCompany.id === userId){
+            company = tentativeCompany
+        }
+    });
+    return company
+}
+
 export const renderAdminUsers = async (companyID) => {
     const usersContainer = document.querySelector('#admin__users-container')
     usersContainer.innerHTML = ''
@@ -204,11 +214,13 @@ export const renderAdminUsers = async (companyID) => {
         } 
     }
 
+    const companyList = await getCompany('all')
+
     usersContainer.classList.add('admin__users-container')
-    await employeeList.forEach(async (employee)  => {
+    employeeList.forEach((employee)  => {
         let companyText = 'Não Contratado'
         if (employee.company_id){
-            const company = await getCompanyAdmin(employee.company_id)
+            const company = getCompanyFromList(employee.company_id, companyList)
             companyText = company.name
         }
         const userCard = document.createElement('div')
@@ -237,8 +249,9 @@ export const renderAdminUsers = async (companyID) => {
         userCard.append(textContainer, buttonContainer)
         textContainer.append(userName, companyName)
         buttonContainer.append(editButton, deleteButton)
-    });
+    })
     handleUserEditButtons()
+    handleUserDeleteButtons()
 }
 
 export const renderAdminDepartments = async (companyID) => {
@@ -497,9 +510,9 @@ export const renderEditDepartmentModal = async () => {
             toast('red', 'Informe uma nova Descrição')
         } else {
             await editDepartment(departmentID, newDescription)
-            const currentDepartments = document.querySelector('#department__select').value
-            await renderAdminDepartments(currentDepartments)
-            modalController.close()
+            setTimeout(()=>{
+                location.reload()
+            }, 300)
         }
     })
 }
@@ -522,8 +535,8 @@ export const renderEditUserModal = async () => {
         const newEmail = inputList[1].value
 
         await editUser(userID, newName, newEmail)
-        const currentDepartments = document.querySelector('#department__select').value
-        await renderAdminDepartments(currentDepartments)
-        modalController.close()
+        setTimeout(()=>{
+            location.reload()
+        }, 300)
     })
 }

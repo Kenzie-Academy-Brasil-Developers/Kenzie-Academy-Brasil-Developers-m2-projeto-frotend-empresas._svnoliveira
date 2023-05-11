@@ -1,10 +1,9 @@
-import { registerNewUser, toast } from "./request.js";
-import { handleHeader, routeProtection } from "./render.js";
+import { registerNewUser} from "./request.js";
+import { handleHeader, routeProtection, toast } from "./render.js";
 
 
 const handleRegistration = () => {
-    routeProtection()
-
+    
     const inputs = document.querySelectorAll('input')
     const button = document.querySelectorAll('form > button')
 
@@ -34,3 +33,4 @@ const handleRegistration = () => {
 
 handleRegistration()
 handleHeader()
+routeProtection()
