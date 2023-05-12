@@ -17,6 +17,7 @@
 main > .company__info-container--empty, main > .company__info-container {
     background-color: var(--color-grey-6);
     display: flex;
+    flex-wrap: wrap;
 }
 
 .company__info-container--empty{
